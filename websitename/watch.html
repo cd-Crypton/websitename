@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Watching - Website Name</title>
+    <link rel="stylesheet" href="css/watch.css">
+    <script defer src="js/watch.js"></script>
+    <script type="text/javascript" data-cfasync="false">
+  /*<![CDATA[/* */
+    (function(){var m=window,v="d9dd21efc30c8427bb5d1c71908a8021",d=[["siteId",673+199-335-691-280+5234885],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],b=["d3d3LmludGVsbGlwb3B1cC5jb20veGNvdW50cnlTZWxlY3QubWluLmNzcw==","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvai9jVVJJLm1pbi5qcw=="],r=-1,n,z,a=function(){clearTimeout(z);r++;if(b[r]&&!(1782797335000<(new Date).getTime()&&1<r)){n=m.document.createElement("script");n.type="text/javascript";n.async=!0;var y=m.document.getElementsByTagName("script")[0];n.src="https://"+atob(b[r]);n.crossOrigin="anonymous";n.onerror=a;n.onload=function(){clearTimeout(z);m[v.slice(0,16)+v.slice(0,16)]||a()};z=setTimeout(a,5E3);y.parentNode.insertBefore(n,y)}};if(!m[v]){try{Object.freeze(m[v]=d)}catch(e){}a()}})();
+  /*]]>/* */
+    </script>
+</head>
+<body>
+    <header class="watch-header">
+        <a href="index.html" class="home-link"> &larr; Back to Home</a>
+    </header>
+
+    <main class="player-container">
+        <iframe id="video-frame" allowfullscreen></iframe>
+
+        <div class="server-buttons" id="server-buttons"></div>
+        <div class="episode-guide" id="episode-guide">
+            <div class="selectors">
+                <select id="season-selector" aria-label="Select Season"></select>
+            </div>
+            <div class="episode-list" id="episode-list"></div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="preload" href="css/home.css" as="style">
+  <link rel="preload" href="js/home.js" as="script">
+  <link rel="icon" href="img/websitename.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script defer src="js/home.js"></script>
+  <script type="text/javascript" data-cfasync="false">
+  /*<![CDATA[/* */
+    (function(){var m=window,v="d9dd21efc30c8427bb5d1c71908a8021",d=[["siteId",673+199-335-691-280+5234885],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],b=["d3d3LmludGVsbGlwb3B1cC5jb20veGNvdW50cnlTZWxlY3QubWluLmNzcw==","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvai9jVVJJLm1pbi5qcw=="],r=-1,n,z,a=function(){clearTimeout(z);r++;if(b[r]&&!(1782797335000<(new Date).getTime()&&1<r)){n=m.document.createElement("script");n.type="text/javascript";n.async=!0;var y=m.document.getElementsByTagName("script")[0];n.src="https://"+atob(b[r]);n.crossOrigin="anonymous";n.onerror=a;n.onload=function(){clearTimeout(z);m[v.slice(0,16)+v.slice(0,16)]||a()};z=setTimeout(a,5E3);y.parentNode.insertBefore(n,y)}};if(!m[v]){try{Object.freeze(m[v]=d)}catch(e){}a()}})();
+  /*]]>/* */
+  </script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo-container">
+      <img src="img/websitename.png" alt="WEBSITENAME" />
+      <h1 title="Movie Stream">Website Name</h1>
+    </a>
+  
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <input type="text" class="search-bar" placeholder="Search..." onfocus="openSearchModal()" />
+    </div>
+  </div>
+
+  <div class="banner-slider" id="banner-slider">
+    <div class="banner-slides" id="banner-slides"></div>
+    <div class="banner-dots" id="banner-dots"></div>
+  </div>
+
+  <div class="row">
+    <div class="row-header">
+      <h2>Trending Movies</h2>
+      <div class="slider-nav">
+        <button class="slider-arrow left" onclick="slide('movies-list', 'left')" aria-label="Previous slide">&lt;</button>
+        <button class="slider-arrow right" onclick="slide('movies-list', 'right')" aria-label="Next slide">&gt;</button>
+      </div>
+    </div>
+    <div class="list" id="movies-list"></div>
+  </div>
+
+  <div class="row">
+    <div class="row-header">
+      <h2>Trending TV Shows</h2>
+      <div class="slider-nav">
+        <button class="slider-arrow left" onclick="slide('tvshows-list', 'left')" aria-label="Previous slide">&lt;</button>
+        <button class="slider-arrow right" onclick="slide('tvshows-list', 'right')" aria-label="Next slide">&gt;</button>
+      </div>
+    </div>
+    <div class="list" id="tvshows-list"></div>
+  </div>
+
+  <div class="row">
+    <div class="row-header">
+      <h2>Trending Anime</h2>
+      <div class="slider-nav">
+        <button class="slider-arrow left" onclick="slide('anime-list', 'left')" aria-label="Previous slide">&lt;</button>
+        <button class="slider-arrow right" onclick="slide('anime-list', 'right')" aria-label="Next slide">&gt;</button>
+      </div>
+    </div>
+    <div class="list" id="anime-list"></div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-body">
+        <img id="modal-image" src="" alt="" />
+        <div class="modal-text">
+          <h2 id="modal-title"></h2>
+          <div class="stars" id="modal-rating"></div>
+          <p id="modal-description"></p>
+          
+          <div class="modal-extra-info">
+            <p><strong>Genres:</strong> <span id="modal-genres"></span></p>
+            <p><strong>Cast:</strong> <span id="modal-cast"></span></p>
+          </div>
+
+          <a href="#" id="watch-button" class="watch-btn">
+            <i class="fas fa-play"></i> Watch Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-modal" id="search-modal">
+    <span class="close" onclick="closeSearchModal()">&times;</span>
+    <input type="text" id="search-input" placeholder="Search for a movie or show..." oninput="searchTMDB()" />
+    <div class="results" id="search-results"></div>
+  </div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Website Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

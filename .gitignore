@@ -1,0 +1,12 @@
+# .gitignore
+
+# dependencies
+node_modules
+
+# build output
+dist
+build
+
+# environment variables
+.env
+.env.*

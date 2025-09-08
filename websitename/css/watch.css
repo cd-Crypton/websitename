@@ -1,0 +1,152 @@
+/* css/watch.css */
+
+/* Reuse color variables for consistency */
+:root {
+  --primary-color: #2b313d; /* Dark blue-grey from your logo's background */
+  --accent-color: #3b4252; /* Slightly lighter shade for hover/active states */
+  --background-color: #1a1e26; /* Deeper background, slightly darker than primary */
+  --container-bg-color: #2b313d; /* Matches primary color for containers */
+  --text-color: #ffffff;
+  --text-color-secondary: #cccccc; /* Lighter secondary text */
+  --stars-color: #b0b0b0; /* Lighter shade for review stars */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.watch-header {
+  padding: 1rem 2rem;
+}
+
+.home-link {
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.home-link:hover {
+  color: var(--accent-color);
+}
+
+.player-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem;
+}
+
+#video-frame {
+  width: 100%;
+  border: none;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+.server-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.server-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--container-bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.server-btn:hover {
+  background-color: #3b4252;
+}
+
+.server-btn.active {
+  background-color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* =================================== */
+/* EPISODE SELECTOR STYLES           */
+/* =================================== */
+.episode-guide {
+  display: none;
+  margin-top: 1.5rem;
+  background-color: var(--container-bg-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.selectors {
+  margin-bottom: 1rem;
+}
+
+#season-selector {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: 1px solid #4a515c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.episode-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--text-color-secondary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.episode-btn:hover {
+  background-color: #4a515c;
+  color: var(--text-color);
+}
+
+.episode-btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .watch-header { padding: 1rem; }
+  .player-container { padding: 0 1rem 1rem; }
+  .server-btn, .episode-btn { font-size: 0.8rem; padding: 8px 12px; }
+  #season-selector { font-size: 0.9rem; max-width: 200px; }
+}

@@ -1,0 +1,96 @@
+/* Reuse color variables for consistency */
+:root {
+  --primary-color: #2b313d;
+  --accent-color: #3b4252;
+  --background-color: #1a1e26;
+  --container-bg-color: #2b313d;
+  --text-color: #ffffff;
+  --text-color-secondary: #cccccc;
+  --stars-color: #b0b0b0;
+}
+
+/* Main container for static page content */
+.static-container {
+  max-width: 900px;
+  margin: 120px auto 40px auto; /* Margin top to clear the fixed navbar */
+  padding: 2rem;
+  background-color: var(--container-bg-color);
+  border-radius: 8px;
+  min-height: 60vh;
+}
+
+.static-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+.static-container h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.static-container p {
+  line-height: 1.8;
+  color: var(--text-color-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Styles for the contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--accent-color);
+  border: 1px solid #4a515c;
+  border-radius: 5px;
+  padding: 12px;
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--stars-color);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start; /* Don't stretch the button */
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+}
